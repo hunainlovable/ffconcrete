@@ -166,40 +166,91 @@ const Index = () => {
     <div>
       <ContactWidget />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center hero-gradient">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-primary/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-primary/90"></div>
         </div>
         
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-accent/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-accent/15 rounded-full blur-lg animate-pulse delay-500"></div>
+        
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
-          <div className="max-w-4xl mx-auto animate-fade-up">
-            <Badge variant="secondary" className="mb-6 bg-accent/20 text-accent border-accent/30">
-              Houston's Premier Concrete Company Since 2013
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-shadow">
-              Building Strength That <span className="text-accent">Lasts</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
-              Professional concrete services for residential and commercial projects. 
-              Licensed, insured, and committed to excellence since 2013.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="animate-fade-up mb-8">
+              <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30 px-6 py-2 text-sm font-medium backdrop-blur-sm">
+                <Award className="mr-2 h-4 w-4" />
+                Houston's Premier Concrete Company Since 2013
+              </Badge>
+            </div>
+            
+            {/* Main Heading */}
+            <div className="animate-fade-up delay-200 mb-8">
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold mb-6 leading-tight">
+                <span className="block text-primary-foreground">Building</span>
+                <span className="block text-accent bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent">
+                  Excellence
+                </span>
+                <span className="block text-primary-foreground text-4xl md:text-5xl lg:text-6xl font-light mt-4">
+                  That Stands the Test of Time
+                </span>
+              </h1>
+            </div>
+            
+            {/* Subtitle */}
+            <div className="animate-fade-up delay-400 mb-12">
+              <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 max-w-4xl mx-auto leading-relaxed font-light">
+                Transform your vision into reality with <span className="font-semibold text-accent">FF Concrete</span> — 
+                Houston's trusted partner for premium concrete solutions that combine 
+                <span className="font-semibold"> durability, beauty, and innovation</span>.
+              </p>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="animate-fade-up delay-600 flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a href="tel:+1-832-375-4830">
-                <Button size="lg" variant="hero-primary" className="text-lg px-8 py-4">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Get Free Quote
+                <Button size="lg" variant="hero-primary" className="text-lg px-10 py-6 rounded-xl shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105">
+                  <Phone className="mr-3 h-6 w-6" />
+                  Get Your Free Quote
                 </Button>
               </a>
               <Link to="/services">
-                <Button variant="hero-secondary" size="lg" className="text-lg px-8 py-4">
-                  Our Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button variant="hero-secondary" size="lg" className="text-lg px-10 py-6 rounded-xl border-2 border-primary-foreground/30 hover:border-primary-foreground/50 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+                  Explore Our Services
+                  <ArrowRight className="ml-3 h-6 w-6" />
                 </Button>
               </Link>
             </div>
+            
+            {/* Trust Indicators */}
+            <div className="animate-fade-up delay-800 mt-16 pt-8 border-t border-primary-foreground/20">
+              <div className="flex flex-wrap justify-center items-center gap-8 text-primary-foreground/70">
+                <div className="flex items-center gap-2">
+                  <Shield className="h-5 w-5 text-accent" />
+                  <span className="text-sm font-medium">Licensed & Insured</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award className="h-5 w-5 text-accent" />
+                  <span className="text-sm font-medium">15+ Years Experience</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-accent" />
+                  <span className="text-sm font-medium">500+ Projects Completed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-primary-foreground/50 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
