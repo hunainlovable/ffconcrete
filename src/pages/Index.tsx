@@ -256,15 +256,15 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center animate-scale-in">
-                <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+              <div key={index} className="text-center animate-scale-in py-4 sm:py-6">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-1 sm:mb-2">
                   {stat.number}
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-muted-foreground font-medium text-sm sm:text-base">
                   {stat.label}
                 </div>
               </div>
@@ -274,18 +274,18 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Our <span className="text-accent">Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               From residential driveways to commercial foundations, we deliver exceptional concrete solutions tailored to your needs.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <Link key={index} to={service.link}>
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:scale-105 group">
