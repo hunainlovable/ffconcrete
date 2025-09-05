@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import SEO from '@/components/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
