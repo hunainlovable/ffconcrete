@@ -53,9 +53,11 @@ const Navigation = () => {
               <Phone className="h-4 w-4 mr-2" />
               (713) 555-0123
             </a>
-            <Button className="btn-hero-primary">
-              Get Free Quote
-            </Button>
+            <Link to="/contact">
+              <Button variant="hero-primary">
+                Get Free Quote
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -89,9 +91,11 @@ const Navigation = () => {
                   <Phone className="h-4 w-4 mr-2" />
                   (713) 555-0123
                 </a>
-                <Button className="btn-hero-primary w-full">
-                  Get Free Quote
-                </Button>
+                <Link to="/contact">
+                  <Button variant="hero-primary" className="w-full">
+                    Get Free Quote
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

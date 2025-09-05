@@ -50,7 +50,7 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: '15+', label: 'Years Experience' },
+    { number: '11+', label: 'Years Experience' },
     { number: '500+', label: 'Projects Completed' },
     { number: '98%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Emergency Service' }
@@ -92,14 +92,14 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
           <div className="max-w-4xl mx-auto animate-fade-up">
             <Badge variant="secondary" className="mb-6 bg-accent/20 text-accent border-accent/30">
-              Houston's Premier Concrete Company
+              Houston's Premier Concrete Company Since 2013
             </Badge>
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-shadow">
               Building Strength That <span className="text-accent">Lasts</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
               Professional concrete services for residential and commercial projects. 
-              Licensed, insured, and committed to excellence since 2009.
+              Licensed, insured, and committed to excellence since 2013.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="hero-primary" className="text-lg px-8 py-4">
@@ -177,7 +177,7 @@ const Index = () => {
                 Why Choose <span className="text-accent">FF Concrete?</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                With over 15 years of experience serving Houston, we've earned our reputation through quality work, fair pricing, and exceptional customer service.
+                With over 11 years of experience serving Houston since 2013, we've earned our reputation through quality work, fair pricing, and exceptional customer service.
               </p>
               
               <div className="space-y-4">

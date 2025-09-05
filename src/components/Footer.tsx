@@ -12,7 +12,7 @@ const Footer = () => {
               FF<span className="text-accent">Concrete</span>
             </div>
             <p className="text-primary-foreground/80 mb-4">
-              Building strength that lasts. Houston's premier concrete services company with over 15 years of experience.
+              Building strength that lasts. Houston's premier concrete services company since 2013.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
@@ -74,9 +74,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  Blog
-                </a>
+                <Link to="/privacy" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Terms & Conditions
+                </Link>
               </li>
             </ul>
           </div>
@@ -110,7 +115,9 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2024 FF Concrete. All rights reserved. | Licensed & Insured
+            © 2024 FF Concrete. All rights reserved. | Licensed & Insured | 
+            <Link to="/privacy" className="hover:text-accent ml-2">Privacy Policy</Link> | 
+            <Link to="/terms" className="hover:text-accent ml-2">Terms & Conditions</Link>
           </p>
         </div>
       </div>
