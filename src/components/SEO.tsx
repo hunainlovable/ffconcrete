@@ -15,7 +15,7 @@ const SEO = ({
   description, 
   keywords = '', 
   canonical = '', 
-  ogImage = '/logo.png',
+  ogImage = '/thumbnail.png',
   ogType = 'website',
   structuredData
 }: SEOProps) => {
