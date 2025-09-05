@@ -1,4 +1,9 @@
-import { useState } from 'react';
+# Read the current file
+with open('/Users/hunainqureshi/Desktop/ffconcrete/src/components/ContactWidget.tsx', 'r') as f:
+    content = f.read()
+
+# Define the new mobile-friendly contact widget
+new_contact_widget = '''import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -186,4 +191,10 @@ const ContactWidget = () => {
   );
 };
 
-export default ContactWidget;
+export default ContactWidget;'''
+
+# Write the updated content
+with open('/Users/hunainqureshi/Desktop/ffconcrete/src/components/ContactWidget.tsx', 'w') as f:
+    f.write(new_contact_widget)
+
+print('ContactWidget component updated for mobile responsiveness')

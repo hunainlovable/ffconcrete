@@ -1,4 +1,9 @@
-import { useState } from 'react';
+# Read the current file
+with open('/Users/hunainqureshi/Desktop/ffconcrete/src/components/Navigation.tsx', 'r') as f:
+    content = f.read()
+
+# Define the new mobile-friendly navigation
+new_navigation = '''import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone } from 'lucide-react';
@@ -108,4 +113,10 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navigation;'''
+
+# Write the updated content
+with open('/Users/hunainqureshi/Desktop/ffconcrete/src/components/Navigation.tsx', 'w') as f:
+    f.write(new_navigation)
+
+print('Navigation component updated for mobile responsiveness')

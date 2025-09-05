@@ -1,4 +1,9 @@
-import { Link } from 'react-router-dom';
+# Read the current file
+with open('/Users/hunainqureshi/Desktop/ffconcrete/src/components/Footer.tsx', 'r') as f:
+    content = f.read()
+
+# Define the new mobile-friendly footer
+new_footer = '''import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
@@ -129,4 +134,10 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer;'''
+
+# Write the updated content
+with open('/Users/hunainqureshi/Desktop/ffconcrete/src/components/Footer.tsx', 'w') as f:
+    f.write(new_footer)
+
+print('Footer component updated for mobile responsiveness')
