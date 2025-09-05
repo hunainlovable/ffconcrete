@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { 
   Hammer, 
   Mountain, 
@@ -80,6 +81,12 @@ const Custom = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Custom Concrete Solutions Houston | Specialized Concrete Projects"
+        description="FF Concrete provides custom concrete solutions for unique projects. From architectural concrete to specialized installations, we deliver custom concrete solutions in Houston."
+        keywords="custom concrete Houston, specialized concrete projects, architectural concrete, custom concrete design, unique concrete solutions"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 section-gradient">
@@ -98,7 +105,7 @@ const Custom = () => {
                 Start Your Custom Project
               </Button>
               <Link to="/contact">
-                <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+                <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                   Design Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -274,10 +281,10 @@ const Custom = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
               <Phone className="mr-2 h-5 w-5" />
-              Call: (713) 555-0123
+              <a href="tel:+1-832-375-4830" className="text-accent hover:text-accent/80 transition-colors">Call: (832)-375-4830</a>
             </Button>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                 Start Your Custom Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -286,6 +293,7 @@ const Custom = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

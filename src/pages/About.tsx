@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { 
   Target, 
   Heart, 
@@ -47,6 +48,12 @@ const About = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="About FF Concrete | Houston's Trusted Concrete Contractor"
+        description="Learn about FF Concrete's 15+ years of experience serving Houston. Founded in 2009, we deliver quality concrete solutions with family-owned values and professional expertise."
+        keywords="about FF Concrete, Houston concrete contractor history, concrete company Houston, family-owned concrete business, concrete contractor experience"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 section-gradient">
@@ -193,7 +200,7 @@ const About = () => {
               Get Free Quote
             </Button>
             <Link to="/services">
-              <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                 View Our Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -202,6 +209,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

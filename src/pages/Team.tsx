@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { 
   User, 
   Mail, 
@@ -26,28 +27,28 @@ const Team = () => {
       specialties: ['Operations Management', 'Quality Control', 'Team Coordination']
     },
     {
-      name: 'Sarah Thompson',
+      name: 'Sofia Rodriguez',
       title: 'Project Coordinator',
-      bio: 'Sarah manages project timelines, coordinates with clients, and ensures clear communication throughout every project. Her dedication to customer service helps make the construction process smooth for our clients.',
+      bio: 'Sofia manages project timelines, coordinates with clients, and ensures clear communication throughout every project. Her dedication to customer service helps make the construction process smooth for our clients.',
       specialties: ['Project Coordination', 'Client Relations', 'Scheduling']
     },
     {
-      name: 'Michael Johnson',
+      name: 'Miguel Torres',
       title: 'Lead Concrete Specialist',
-      bio: 'Michael brings 15+ years of hands-on concrete experience to every project. His expertise in decorative concrete and complex installations ensures exceptional results for our most demanding projects.',
+      bio: 'Miguel brings 15+ years of hands-on concrete experience to every project. His expertise in decorative concrete and complex installations ensures exceptional results for our most demanding projects.',
       specialties: ['Decorative Concrete', 'Technical Installation', 'Quality Assurance']
     },
     {
-      name: 'Emily Davis',
+      name: 'Isabella Martinez',
       title: 'Customer Relations',
-      bio: 'Emily is your first point of contact and ensures every client receives personalized attention. She coordinates estimates, answers questions, and maintains relationships long after project completion.',
+      bio: 'Isabella is your first point of contact and ensures every client receives personalized attention. She coordinates estimates, answers questions, and maintains relationships long after project completion.',
       specialties: ['Customer Service', 'Estimates', 'Client Communication']
     },
     {
-      name: 'Carlos Ramirez',
+      name: 'Andres Santos',
       title: 'Field Supervisor',
-      bio: 'Carlos supervises on-site operations and ensures all safety protocols are followed. His leadership in the field and commitment to quality workmanship keeps our projects running safely and efficiently.',
-      specialties: ['Field Operations', 'Safety Management', 'Crew Leadership']
+      bio: 'Andres brings extensive field experience and technical expertise to our team. His attention to detail and commitment to safety ensures every project meets our high standards for quality and efficiency.',
+      specialties: ['Field Operations', 'Safety Management', 'Technical Supervision']
     }
   ];
 
@@ -70,6 +71,12 @@ const Team = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Meet the FF Concrete Team | Experienced Houston Concrete Professionals"
+        description="Meet the skilled professionals behind FF Concrete's success. Our experienced team of concrete specialists is committed to delivering quality results for your Houston concrete projects."
+        keywords="FF Concrete team, Houston concrete professionals, concrete specialists Houston, experienced concrete contractors, concrete project managers"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 section-gradient">
@@ -79,8 +86,9 @@ const Team = () => {
               Meet Our <span className="text-accent">Team</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              The skilled professionals behind FF Concrete's success. Our experienced team is committed 
-              to delivering exceptional concrete solutions and outstanding customer service.
+              With more than 500+ employees across Houston, FF Concrete is proud to showcase some highlights 
+              of our upper management team. These skilled professionals represent the leadership and expertise 
+              that drives our success in delivering exceptional concrete solutions and outstanding customer service.
             </p>
           </div>
         </div>
@@ -238,7 +246,7 @@ const Team = () => {
                 Send Resume
               </Button>
               <Link to="/contact">
-                <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+                <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                   Contact HR
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -260,10 +268,10 @@ const Team = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
               <Phone className="mr-2 h-5 w-5" />
-              Call: (713) 555-0123
+              <a href="tel:+1-832-375-4830" className="text-accent hover:text-accent/80 transition-colors">Call: (832)-375-4830</a>
             </Button>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                 Get Your Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -272,6 +280,7 @@ const Team = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

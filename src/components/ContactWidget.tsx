@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -21,6 +22,26 @@ import { Link } from 'react-router-dom';
 const ContactWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'contact' | 'services'>('contact');
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    message: ''
+  });
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Quote Request Submitted!",
+      description: "We'll contact you within 24 hours to discuss your project.",
+    });
+    setFormData({ name: '', phone: '', message: '' });
+    setIsOpen(false);
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
 
   const services = [
     { icon: Home, title: 'Residential', link: '/services/residential' },
@@ -77,7 +98,7 @@ const ContactWidget = () => {
                   {/* Quick Contact Info */}
                   <div className="grid grid-cols-2 gap-3">
                     <a 
-                      href="tel:713-555-0123" 
+                      href="tel:+1-832-375-4830" 
                       className="flex items-center gap-2 p-3 rounded-lg bg-accent/10 hover:bg-accent/20 transition-colors"
                     >
                       <Phone className="h-4 w-4 text-accent" />
@@ -93,15 +114,16 @@ const ContactWidget = () => {
                   </div>
 
                   {/* Quick Contact Form */}
-                  <form className="space-y-3">
+                  <form name="contact-widget" method="POST" data-netlify="true" className="space-y-3" onSubmit={handleSubmit}>
+                    <input type="hidden" name="form-name" value="contact-widget" />
                     <div className="grid grid-cols-2 gap-2">
                       <div>
                         <Label htmlFor="widget-name" className="text-xs">Name</Label>
-                        <Input id="widget-name" className="h-8 text-sm" />
+                        <Input id="widget-name" className="h-8 text-sm" value={formData.name} onChange={(e) => handleInputChange("name", e.target.value)} required />
                       </div>
                       <div>
                         <Label htmlFor="widget-phone" className="text-xs">Phone</Label>
-                        <Input id="widget-phone" type="tel" className="h-8 text-sm" />
+                        <Input id="widget-phone" type="tel" className="h-8 text-sm" value={formData.phone} onChange={(e) => handleInputChange("phone", e.target.value)} required />
                       </div>
                     </div>
                     <div>
@@ -113,7 +135,7 @@ const ContactWidget = () => {
                         placeholder="Describe your concrete project..."
                       />
                     </div>
-                    <Button className="w-full" size="sm" variant="hero-primary">
+                    <Button type="submit" className="w-full" size="sm" variant="hero-primary">
                       <Send className="h-3 w-3 mr-2" />
                       Get Free Quote
                     </Button>

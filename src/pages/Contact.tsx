@@ -55,8 +55,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      content: '(713) 555-0123',
-      link: 'tel:+1-713-555-0123'
+      content: '(832)-375-4830',
+      link: 'tel:+1-832-375-4830'
     },
     {
       icon: Mail,
@@ -67,7 +67,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Address',
-      content: '1234 Houston Avenue\nHouston, TX 77001',
+      content: '8000 Harwin Drive\nHouston, TX 77036',
       link: 'https://maps.google.com/?q=Houston,TX'
     },
     {
@@ -98,6 +98,12 @@ const Contact = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Contact FF Concrete | Get Your Free Quote Today"
+        description="Contact FF Concrete for your concrete project needs. Located at 8000 Harwin Drive, Houston TX. Call (832)-375-4830 for free estimates on residential and commercial concrete services."
+        keywords="contact FF Concrete, concrete contractor Houston, free concrete quote, concrete estimate Houston, concrete consultation"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 section-gradient">
@@ -122,7 +128,8 @@ const Contact = () => {
             <Card className="p-8">
               <CardContent className="p-0">
                 <h2 className="text-3xl font-bold mb-6">Get Your Free Quote</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name">Full Name *</Label>
@@ -141,7 +148,7 @@ const Contact = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="(713) 555-0123"
+                        placeholder="(832)-375-4830"
                         required
                       />
                     </div>
@@ -264,7 +271,7 @@ const Contact = () => {
               <div className="text-center">
                 <MapPin className="h-16 w-16 text-accent mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">FF Concrete</h3>
-                <p className="text-muted-foreground">1234 Houston Avenue, Houston, TX 77001</p>
+                <p className="text-muted-foreground">8000 Harwin Drive, Houston, TX 77036</p>
                 <p className="text-sm text-muted-foreground mt-2">
                   Interactive map would be embedded here
                 </p>
@@ -326,18 +333,23 @@ const Contact = () => {
             Don't wait - get your free estimate today and see why Houston trusts FF Concrete for their concrete needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now: (713) 555-0123
-            </Button>
-            <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Us Today
-            </Button>
+            <a href="tel:+1-832-375-4830">
+              <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now: (832)-375-4830
+              </Button>
+            </a>
+            <a href="mailto:info@ffconcrete.com">
+              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us Today
+              </Button>
+            </a>
           </div>
         </div>
       </section>
     </div>
+    </>
   );
 };
 

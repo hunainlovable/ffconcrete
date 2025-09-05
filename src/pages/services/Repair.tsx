@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { 
   Wrench, 
   AlertTriangle, 
@@ -73,6 +74,12 @@ const Repair = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Concrete Repair Services Houston | Foundation & Driveway Repair"
+        description="FF Concrete offers professional concrete repair services including foundation repair, driveway resurfacing, and concrete restoration. Expert concrete repair contractor in Houston."
+        keywords="concrete repair Houston, foundation repair, driveway repair, concrete resurfacing, concrete restoration Houston"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 section-gradient">
@@ -91,7 +98,7 @@ const Repair = () => {
                 Emergency Repair Service
               </Button>
               <Link to="/contact">
-                <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+                <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                   Schedule Assessment
                   <Clock className="ml-2 h-5 w-5" />
                 </Button>
@@ -292,10 +299,10 @@ const Repair = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
               <Phone className="mr-2 h-5 w-5" />
-              Emergency: (713) 555-0123
+              <a href="tel:+1-832-375-4830" className="text-accent hover:text-accent/80 transition-colors">Emergency: (832)-375-4830</a>
             </Button>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                 Schedule Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -304,6 +311,7 @@ const Repair = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -27,9 +27,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="font-display text-2xl font-bold text-primary">
-              FF<span className="text-accent">Concrete</span>
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="FF Concrete" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -49,9 +51,9 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+1-713-555-0123" className="flex items-center text-foreground hover:text-accent transition-colors">
+            <a href="tel:+1-832-375-4830" className="flex items-center text-foreground hover:text-accent transition-colors">
               <Phone className="h-4 w-4 mr-2" />
-              (713) 555-0123
+              (832)-375-4830
             </a>
             <Link to="/contact">
               <Button variant="hero-primary">
@@ -87,9 +89,9 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 space-y-3">
-                <a href="tel:+1-713-555-0123" className="flex items-center text-foreground hover:text-accent transition-colors">
+                <a href="tel:+1-832-375-4830" className="flex items-center text-foreground hover:text-accent transition-colors">
                   <Phone className="h-4 w-4 mr-2" />
-                  (713) 555-0123
+                  (832)-375-4830
                 </a>
                 <Link to="/contact">
                   <Button variant="hero-primary" className="w-full">

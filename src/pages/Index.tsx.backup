@@ -20,84 +20,6 @@ import {
 } from 'lucide-react';
 import heroImage from '@/assets/hero-concrete.jpg';
 import ContactWidget from '@/components/ContactWidget';
-import SEO from '@/components/SEO';
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "FF Concrete",
-  "description": "Houston's premier concrete contractor specializing in residential and commercial concrete services including driveways, patios, foundations, and decorative concrete.",
-  "url": "https://ffconcrete.com",
-  "telephone": "(832)-375-4830",
-  "email": "info@ffconcrete.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "8000 Harwin Drive",
-    "addressLocality": "Houston",
-    "addressRegion": "TX",
-    "postalCode": "77036",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "29.7604",
-    "longitude": "-95.3698"
-  },
-  "openingHours": "Mo-Fr 07:00-18:00,Sa 08:00-16:00",
-  "priceRange": "$$",
-  "serviceArea": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": "29.7604",
-      "longitude": "-95.3698"
-    },
-    "geoRadius": "50000"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Concrete Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Residential Concrete",
-          "description": "Driveways, patios, sidewalks, and foundations for residential properties"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Commercial Concrete",
-          "description": "Commercial foundations, parking lots, and industrial concrete work"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Decorative Concrete",
-          "description": "Stamped concrete, colored concrete, and decorative finishes"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Concrete Repair",
-          "description": "Concrete repair, resurfacing, and restoration services"
-        }
-      }
-    ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "150"
-  }
-};
 
 const Index = () => {
   const services = [
@@ -156,13 +78,6 @@ const Index = () => {
   ];
 
   return (
-    <>
-      <SEO
-        title="Houston Concrete Contractor | Residential & Commercial Services"
-        description="FF Concrete is Houston's trusted concrete contractor specializing in driveways, patios, foundations, and decorative concrete. Licensed, insured, and serving Houston for over 15 years."
-        keywords="concrete contractor Houston, residential concrete, commercial concrete, driveway installation, patio construction, foundation repair, decorative concrete, stamped concrete, concrete repair Houston"
-        structuredData={structuredData}
-      />
     <div>
       <ContactWidget />
       {/* Hero Section */}
@@ -187,12 +102,10 @@ const Index = () => {
               Licensed, insured, and committed to excellence since 2013.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+1-832-375-4830">
-                <Button size="lg" variant="hero-primary" className="text-lg px-8 py-4">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Get Free Quote
-                </Button>
-              </a>
+              <Button size="lg" variant="hero-primary" className="text-lg px-8 py-4">
+                <Phone className="mr-2 h-5 w-5" />
+                Get Free Quote
+              </Button>
               <Link to="/services">
                 <Button variant="hero-secondary" size="lg" className="text-lg px-8 py-4">
                   Our Services
@@ -401,12 +314,10 @@ const Index = () => {
             Get a free, no-obligation quote for your concrete project. Our team is ready to turn your vision into reality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+1-832-375-4830">
-              <Button size="lg" variant="hero-primary" className="text-lg px-8 py-4">
-                <Phone className="mr-2 h-5 w-5" />
-                Call (832)-375-4830
-              </Button>
-            </a>
+            <Button size="lg" variant="hero-primary" className="text-lg px-8 py-4">
+              <Phone className="mr-2 h-5 w-5" />
+              Call (713) 555-0123
+            </Button>
             <Link to="/contact">
               <Button variant="hero-secondary" size="lg" className="text-lg px-8 py-4">
                 Contact Us Online
@@ -417,7 +328,6 @@ const Index = () => {
         </div>
       </section>
     </div>
-    </>
   );
 };
 

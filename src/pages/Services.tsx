@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { 
   Home, 
   Building2, 
@@ -85,6 +86,12 @@ const Services = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Concrete Services Houston | Residential & Commercial Solutions"
+        description="FF Concrete offers comprehensive concrete services in Houston including residential driveways, commercial foundations, decorative concrete, and repair services. Licensed and insured."
+        keywords="concrete services Houston, residential concrete services, commercial concrete Houston, driveway installation, foundation construction, decorative concrete, concrete repair services"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 section-gradient">
@@ -207,12 +214,14 @@ const Services = () => {
             Contact us today for a free consultation and detailed estimate for your concrete project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
-              <Phone className="mr-2 h-5 w-5" />
-              Call (713) 555-0123
-            </Button>
+            <a href="tel:+1-832-375-4830">
+              <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
+                <Phone className="mr-2 h-5 w-5" />
+                Call (832)-375-4830
+              </Button>
+            </a>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                 Get Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -221,6 +230,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { 
   Palette, 
   Sparkles, 
@@ -71,6 +72,12 @@ const Decorative = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Decorative Concrete Houston | Stamped & Colored Concrete Services"
+        description="FF Concrete specializes in decorative concrete including stamped concrete, colored concrete, and decorative finishes. Transform your Houston property with beautiful decorative concrete."
+        keywords="decorative concrete Houston, stamped concrete, colored concrete, decorative concrete finishes, concrete staining Houston"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 section-gradient">
@@ -89,7 +96,7 @@ const Decorative = () => {
                 Get Design Quote
               </Button>
               <Link to="/contact">
-                <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+                <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                   View Portfolio
                   <Eye className="ml-2 h-5 w-5" />
                 </Button>
@@ -278,10 +285,10 @@ const Decorative = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
               <Phone className="mr-2 h-5 w-5" />
-              Call: (713) 555-0123
+              <a href="tel:+1-832-375-4830" className="text-accent hover:text-accent/80 transition-colors">Call: (832)-375-4830</a>
             </Button>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                 Schedule Design Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -290,6 +297,7 @@ const Decorative = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

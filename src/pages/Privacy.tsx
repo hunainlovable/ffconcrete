@@ -2,6 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Privacy = () => {
   return (
+    <>
+      <SEO
+        title="Privacy Policy | FF Concrete Houston"
+        description="FF Concrete privacy policy. Learn how we protect and handle your personal information when you use our concrete services in Houston."
+        keywords="FF Concrete privacy policy, data protection, privacy information"
+      />
     <div className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
@@ -78,8 +84,8 @@ const Privacy = () => {
                 <p>If you have questions about this Privacy Policy, please contact us at:</p>
                 <ul>
                   <li>Email: privacy@ffconcrete.com</li>
-                  <li>Phone: (713) 555-0123</li>
-                  <li>Address: 1234 Houston Avenue, Houston, TX 77001</li>
+                  <li>Phone: <a href="tel:+1-832-375-4830" className="text-accent hover:text-accent/80 transition-colors">(832)-375-4830</a></li>
+                  <li>Address: 8000 Harwin Drive, Houston, TX 77036</li>
                 </ul>
               </CardContent>
             </Card>
@@ -87,6 +93,7 @@ const Privacy = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

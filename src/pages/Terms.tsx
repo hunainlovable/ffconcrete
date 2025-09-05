@@ -2,6 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Terms = () => {
   return (
+    <>
+      <SEO
+        title="Terms & Conditions | FF Concrete Houston"
+        description="FF Concrete terms and conditions. Review our service terms, warranties, and conditions for concrete services in Houston."
+        keywords="FF Concrete terms conditions, service terms, concrete service agreement"
+      />
     <div className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
@@ -99,8 +105,8 @@ const Terms = () => {
                 <p>For questions about these terms, contact us at:</p>
                 <ul>
                   <li>Email: info@ffconcrete.com</li>
-                  <li>Phone: (713) 555-0123</li>
-                  <li>Address: 1234 Houston Avenue, Houston, TX 77001</li>
+                  <li>Phone: <a href="tel:+1-832-375-4830" className="text-accent hover:text-accent/80 transition-colors">(832)-375-4830</a></li>
+                  <li>Address: 8000 Harwin Drive, Houston, TX 77036</li>
                 </ul>
               </CardContent>
             </Card>
@@ -108,6 +114,7 @@ const Terms = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -8,20 +8,24 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="font-display text-2xl font-bold mb-4">
-              FF<span className="text-accent">Concrete</span>
+            <div className="mb-4">
+              <img 
+                src="/logo.png" 
+                alt="FF Concrete" 
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Building strength that lasts. Houston's premier concrete services company since 2013.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              <a href="https://facebook.com/ffconcrete" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-accent transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              <a href="https://instagram.com/ffconcrete" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-accent transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              <a href="https://linkedin.com/company/ffconcrete" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-accent transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -93,14 +97,14 @@ const Footer = () => {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 mt-0.5 text-accent" />
                 <div className="text-primary-foreground/80">
-                  <p>1234 Houston Avenue</p>
-                  <p>Houston, TX 77001</p>
+                  <p>8000 Harwin Drive</p>
+                  <p>Houston, TX 77036</p>
                 </div>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-accent" />
-                <a href="tel:+1-713-555-0123" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  (713) 555-0123
+                <a href="tel:+1-832-375-4830" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  (832)-375-4830
                 </a>
               </div>
               <div className="flex items-center">

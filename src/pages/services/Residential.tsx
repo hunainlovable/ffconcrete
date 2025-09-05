@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { 
   Home, 
   Car, 
@@ -49,6 +50,12 @@ const Residential = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Residential Concrete Services Houston | Driveways, Patios & Foundations"
+        description="FF Concrete specializes in residential concrete services including driveways, patios, sidewalks, and foundations. Transform your Houston home with our expert concrete solutions."
+        keywords="residential concrete Houston, driveway installation Houston, patio construction, sidewalk concrete, foundation repair Houston, home concrete services"
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 section-gradient">
@@ -62,12 +69,14 @@ const Residential = () => {
               we create beautiful, durable concrete features that enhance your property.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
-                <Phone className="mr-2 h-5 w-5" />
-                Get Free Quote
-              </Button>
+              <a href="tel:+1-832-375-4830">
+                <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Get Free Quote
+                </Button>
+              </a>
               <Link to="/contact">
-                <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+                <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                   Schedule Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -220,12 +229,14 @@ const Residential = () => {
             Ready to enhance your property with professional concrete work? Get your free estimate today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now: (713) 555-0123
-            </Button>
+            <a href="tel:+1-832-375-4830">
+              <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now: (832)-375-4830
+              </Button>
+            </a>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+              <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg border-2 border-white shadow-lg hover:shadow-xl transition-all duration-300">
                 Request Quote Online
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -234,6 +245,7 @@ const Residential = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
