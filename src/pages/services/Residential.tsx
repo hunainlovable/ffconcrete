@@ -52,7 +52,7 @@ const Residential = () => {
   return (
     <>
       <SEO
-        title="Residential Concrete Services Houston | Driveways, Patios & Foundations"
+        title="FF Concrete Residential Services | Driveways, Patios & Foundations Houston"
         description="FF Concrete specializes in residential concrete services including driveways, patios, sidewalks, and foundations. Transform your Houston home with our expert concrete solutions."
         keywords="residential concrete Houston, driveway installation Houston, patio construction, sidewalk concrete, foundation repair Houston, home concrete services"
       />

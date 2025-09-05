@@ -83,7 +83,7 @@ const Custom = () => {
   return (
     <>
       <SEO
-        title="Custom Concrete Solutions Houston | Specialized Concrete Projects"
+        title="FF Concrete Custom Solutions | Specialized Concrete Projects Houston"
         description="FF Concrete provides custom concrete solutions for unique projects. From architectural concrete to specialized installations, we deliver custom concrete solutions in Houston."
         keywords="custom concrete Houston, specialized concrete projects, architectural concrete, custom concrete design, unique concrete solutions"
       />

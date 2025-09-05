@@ -158,7 +158,7 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Houston Concrete Contractor | Residential & Commercial Services"
+        title="FF Concrete | Houston's Premier Concrete Contractor"
         description="FF Concrete is Houston's trusted concrete contractor specializing in driveways, patios, foundations, and decorative concrete. Licensed, insured, and serving Houston for over 15 years."
         keywords="concrete contractor Houston, residential concrete, commercial concrete, driveway installation, patio construction, foundation repair, decorative concrete, stamped concrete, concrete repair Houston"
         structuredData={structuredData}

@@ -74,7 +74,7 @@ const Decorative = () => {
   return (
     <>
       <SEO
-        title="Decorative Concrete Houston | Stamped & Colored Concrete Services"
+        title="FF Concrete Decorative Services | Stamped & Colored Concrete Houston"
         description="FF Concrete specializes in decorative concrete including stamped concrete, colored concrete, and decorative finishes. Transform your Houston property with beautiful decorative concrete."
         keywords="decorative concrete Houston, stamped concrete, colored concrete, decorative concrete finishes, concrete staining Houston"
       />
