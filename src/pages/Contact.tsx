@@ -113,8 +113,7 @@ const Contact = () => {
               Contact <span className="text-accent">FF Concrete</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Ready to start your concrete project? Get in touch for a free consultation and detailed estimate. 
-              We're here to answer your questions and bring your vision to life.
+              Ready to start your concrete project? Get in touch for a free consultation and detailed estimate. We're here to answer your questions and bring your vision to life.
             </p>
           </div>
         </div>
