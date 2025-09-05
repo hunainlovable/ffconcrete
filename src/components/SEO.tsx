@@ -19,9 +19,16 @@ const SEO = ({
   ogType = 'website',
   structuredData
 }: SEOProps) => {
-  const siteUrl = 'https://ffconcrete.com'; // Update with actual domain
-  const fullTitle = title.includes('FF Concrete') ? title : `${title} | FF Concrete`;
+  const siteUrl = 'https://ffconcrete.com';
+  
+  // Ensure FF Concrete is always in the title
+  const fullTitle = title.startsWith('FF Concrete') ? title : `FF Concrete | ${title}`;
+  
+  // Ensure FF Concrete is in the description
   const fullDescription = description.includes('FF Concrete') ? description : `${description} - FF Concrete`;
+  
+  // Use canonical URL or construct from current path
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? `${siteUrl}${window.location.pathname}` : siteUrl);
   
   return (
     <Helmet>
@@ -29,13 +36,13 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonical || `${siteUrl}${window.location.pathname}`} />
+      <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical || `${siteUrl}${window.location.pathname}`} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={`${siteUrl}${ogImage}`} />
       <meta property="og:site_name" content="FF Concrete" />
       <meta property="og:locale" content="en_US" />
