@@ -13,9 +13,13 @@ import {
   Star,
   ArrowRight,
   CheckCircle,
-  Phone
+  Phone,
+  Award,
+  Calendar,
+  Truck
 } from 'lucide-react';
 import heroImage from '@/assets/hero-concrete.jpg';
+import ContactWidget from '@/components/ContactWidget';
 
 const Index = () => {
   const services = [
@@ -75,6 +79,7 @@ const Index = () => {
 
   return (
     <div>
+      <ContactWidget />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center hero-gradient">
         <div 
@@ -97,12 +102,12 @@ const Index = () => {
               Licensed, insured, and committed to excellence since 2009.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
+              <Button size="lg" variant="hero-primary" className="text-lg px-8 py-4">
                 <Phone className="mr-2 h-5 w-5" />
                 Get Free Quote
               </Button>
               <Link to="/services">
-                <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+                <Button variant="hero-secondary" size="lg" className="text-lg px-8 py-4">
                   Our Services
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -218,6 +223,54 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Our <span className="text-accent">Process</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              From initial consultation to project completion, we follow a proven process that ensures quality results on time and within budget.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="h-8 w-8 text-accent-foreground" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">1. Free Consultation</h3>
+              <p className="text-muted-foreground text-sm">We assess your project needs and provide a detailed, no-obligation quote.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="h-8 w-8 text-accent-foreground" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">2. Project Planning</h3>
+              <p className="text-muted-foreground text-sm">Detailed planning, permit acquisition, and scheduling to ensure smooth execution.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Truck className="h-8 w-8 text-accent-foreground" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">3. Professional Execution</h3>
+              <p className="text-muted-foreground text-sm">Our experienced team delivers quality workmanship using premium materials.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-accent-foreground" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">4. Quality Guarantee</h3>
+              <p className="text-muted-foreground text-sm">Final inspection and our satisfaction guarantee for complete peace of mind.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -232,7 +285,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6">
+              <Card key={index} className="p-6 hover:shadow-md transition-shadow">
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-accent fill-current" />
@@ -261,12 +314,12 @@ const Index = () => {
             Get a free, no-obligation quote for your concrete project. Our team is ready to turn your vision into reality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="btn-hero-primary text-lg px-8 py-4">
+            <Button size="lg" variant="hero-primary" className="text-lg px-8 py-4">
               <Phone className="mr-2 h-5 w-5" />
               Call (713) 555-0123
             </Button>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="btn-hero-secondary text-lg px-8 py-4">
+              <Button variant="hero-secondary" size="lg" className="text-lg px-8 py-4">
                 Contact Us Online
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
